@@ -496,6 +496,7 @@ GameObject:
   - 50: {fileID: 421011811}
   - 61: {fileID: 421011810}
   - 114: {fileID: 421011809}
+  - 114: {fileID: 421011815}
   m_Layer: 0
   m_Name: UnityChan2D
   m_TagString: Untagged
@@ -606,9 +607,26 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.22565901, y: -1.86072159, z: 22.8913403}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 632650017}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &421011815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421011808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1f538fdc3927b44aeea9a597bb78d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  shotDelay: .300000012
+  bullet: {fileID: 104562, guid: e7e28eae646935845a7acaad57f6b86a, type: 2}
+  canShot: 0
+  explosion: {fileID: 0}
 --- !u!1 &604680825
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +775,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 418366472}
   m_RootOrder: 6
+--- !u!1 &632650016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 632650017}
+  m_Layer: 0
+  m_Name: ShotPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &632650017
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 632650016}
+  m_LocalRotation: {x: 0, y: 0, z: .70710659, w: -.707106948}
+  m_LocalPosition: {x: .784340978, y: .110721588, z: -22.8913403}
+  m_LocalScale: {x: 1.11195624, y: 1.01572895, z: 1.14046776}
+  m_Children: []
+  m_Father: {fileID: 421011814}
+  m_RootOrder: 0
 --- !u!1 &954191850
 GameObject:
   m_ObjectHideFlags: 0
