@@ -64,7 +64,7 @@ public class UnityChan2DController : MonoBehaviour
         m_rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+     void Update()
     {
         if (m_state != State.Damaged)
         {
@@ -82,7 +82,7 @@ public class UnityChan2DController : MonoBehaviour
         }
     }
 
-    void Move(float move, bool jump)
+    public void Move(float move, bool jump)
     {
         if (Mathf.Abs(move) > 0)
         {

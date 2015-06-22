@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21285124}
   - 114: {fileID: 11475776}
   - 50: {fileID: 5030942}
+  - 114: {fileID: 11453978}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117774}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .274501562, w: .961586654}
   m_LocalPosition: {x: 1.50355482, y: -1.74517083, z: 0}
   m_LocalScale: {x: .100000001, y: .100000001, z: 1}
   m_Children: []
@@ -46,6 +47,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &11453978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee14e76ca4ef3949b109294acf1a156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11475776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,6 +111,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.z
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.w
+      value: .707106709
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

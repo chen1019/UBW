@@ -8,12 +8,18 @@ public class Bullet : MonoBehaviour
 	// ゲームオブジェクト生成から削除するまでの時間
 	public float lifeTime = 1;
 
+    Test kami;
+
 	void Start ()
 	{
 		// ローカル座標のY軸方向に移動する
 		GetComponent<Rigidbody2D>().velocity = transform.up.normalized * speed;
-		
+  
 		// lifeTime秒後に削除
 		Destroy (gameObject, lifeTime);
 	}
+    void Update()
+    {
+        kami.muki();
+    }
 }
