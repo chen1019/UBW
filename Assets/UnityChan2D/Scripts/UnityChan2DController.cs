@@ -20,8 +20,7 @@ public class UnityChan2DController : MonoBehaviour
     IEnumerator Start()
     {
         spaceship = GetComponent<Spaceship>();
-        spaceship.Move(transform.up * -1);
-        while (true)
+        if (Input.GetButtonDown("Fire1"))
         {
             for (int i = 0; i < transform.childCount; i++)
             {
@@ -72,6 +71,14 @@ public class UnityChan2DController : MonoBehaviour
             float x = Input.GetAxis("Horizontal");
             bool jump = Input.GetButtonDown("Jump");
             Move(x, jump);
+        }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Transform shotPosition = transform.GetChild(i);
+                spaceship.Shot(shotPosition);
+            }
         }
     }
 
@@ -146,4 +153,5 @@ public class UnityChan2DController : MonoBehaviour
         Damaged,
         Invincible,
     }
+
 }
