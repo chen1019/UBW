@@ -694,7 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   shotDelay: .300000012
-  bullet: {fileID: 117774, guid: e7e28eae646935845a7acaad57f6b86a, type: 2}
+  bullet: {fileID: 172208, guid: e7e28eae646935845a7acaad57f6b86a, type: 2}
   canShot: 0
   explosion: {fileID: 0}
 --- !u!114 &421011816
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be67be6c700d7384c8036ee79d6b1abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 117774, guid: e7e28eae646935845a7acaad57f6b86a, type: 2}
+  bullet: {fileID: 172208, guid: e7e28eae646935845a7acaad57f6b86a, type: 2}
 --- !u!1 &773670215
 GameObject:
   m_ObjectHideFlags: 0
