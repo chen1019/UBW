@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5024464}
   - 114: {fileID: 11499364}
   - 114: {fileID: 11430972}
+  - 61: {fileID: 6131298}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197244}
-  m_LocalRotation: {x: 0, y: 0, z: .290011555, w: .957023144}
-  m_LocalPosition: {x: 19.2764835, y: -.0675124824, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .470835179, w: .882221222}
+  m_LocalPosition: {x: 19.3430004, y: -.0370000005, z: 0}
   m_LocalScale: {x: .100000001, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,6 +48,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &6131298
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197244}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: .513688207, y: -.0649232715}
+  serializedVersion: 2
+  m_Size: {x: 10.1188688, y: 3.00823879}
 --- !u!114 &11430972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,7 +117,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 197244}
