@@ -16,4 +16,8 @@ public class Bullet : MonoBehaviour
 		// lifeTime秒後に削除
 		Destroy (gameObject, lifeTime);
 	}
+	void OnTriggerEnter2D(Collider2D col)
+	{
+			Destroy(gameObject);
+	}
 }

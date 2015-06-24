@@ -3,21 +3,16 @@ using System.Collections;
 
 public class Ninzin : MonoBehaviour{
 
-	// 爆発のPrefab
-	public GameObject explosion;
-	
-	// 爆発の作成
-	public void Explosion ()
-	{
-		Instantiate (explosion, transform.position, transform.rotation);
-	}
+	// Spaceshipコンポーネント
+	Exp exp;
 
-	void OnTriggerEnter2D (Collider2D c)
+	// ぶつかった瞬間に呼び出される
+	void OnTriggerEnter2D (Collider2D col)
 	{
-		// 弾の削除
-		Destroy(c.gameObject);
+		if (col.gameObject.tag == "Bullet"){ // ぶつかったオブジェクトの判別
 
-		// プレイヤーを削除
-		Destroy (gameObject);
+
+			Destroy(gameObject);
+		}
 	}
 }

@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21242276}
   - 58: {fileID: 5828150}
   - 114: {fileID: 11497314}
+  - 114: {fileID: 11464496}
   m_Layer: 0
   m_Name: Ninzin
   m_TagString: DamageObject
@@ -43,6 +44,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .5
+--- !u!114 &11464496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad58fd691b463f44dbeb33b370f4dc74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 104412, guid: 0a8323572a15d5e4a83a0cde837b249c, type: 2}
 --- !u!114 &11497314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,7 +67,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07c2a50b775e024e923f71c5e291b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 104412, guid: 0a8323572a15d5e4a83a0cde837b249c, type: 2}
 --- !u!212 &21242276
 SpriteRenderer:
   m_ObjectHideFlags: 1

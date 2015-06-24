@@ -15,7 +15,7 @@ public class CameraChasingTargetScript : MonoBehaviour {
 		// 現在位置をPositionに代入
 		Vector3 Position = targetObject.transform.position;
 		// Z軸修正
-		Position.z = -5;
+		Position.z = -25;
 		// 現在の位置に加算減算を行ったPositionを代入する
 		transform.position = Position;
 	}
