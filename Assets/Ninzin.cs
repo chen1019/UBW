@@ -43,7 +43,8 @@ public class Ninzin : MonoBehaviour{
 	// ぶつかった瞬間に呼び出される
 	void OnTriggerEnter2D (Collider2D col)
 	{
-		if (col.gameObject.tag == "Bullet"){ // ぶつかったオブジェクトの判別
+		// ぶつかったオブジェクトの判別
+		if (col.gameObject.tag == "Bullet"){
 
             Destroy(col.gameObject);
 
