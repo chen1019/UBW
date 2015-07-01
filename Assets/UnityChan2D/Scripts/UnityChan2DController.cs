@@ -5,7 +5,9 @@ public class UnityChan2DController : MonoBehaviour
 {
     public float maxSpeed = 10f;
     public float jumpPower = 1000f;
+    public int jumpcount = 1;
     public Vector2 backwardForce = new Vector2(-4.5f, 5.4f);
+    bool canjump = false;
 
     public LayerMask whatIsGround;
 
@@ -29,6 +31,7 @@ public class UnityChan2DController : MonoBehaviour
             }
             yield return new WaitForSeconds(spaceship.shotDelay);
         }
+
     }
 
 
@@ -79,6 +82,7 @@ public class UnityChan2DController : MonoBehaviour
                 Transform shotPosition = transform.GetChild(i);
                 spaceship.Shot(shotPosition);
             }
+
         }
     }
 
@@ -95,13 +99,28 @@ public class UnityChan2DController : MonoBehaviour
         m_animator.SetFloat("Horizontal", move);
         m_animator.SetFloat("Vertical", m_rigidbody2D.velocity.y);
         m_animator.SetBool("isGround", m_isGround);
+        int jumps = jumpcount;
+
+
+
 
         if (jump && m_isGround)
         {
             m_animator.SetTrigger("Jump");
             SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
             m_rigidbody2D.AddForce(Vector2.up * jumpPower);
+            canjump = true;
+
         }
+
+            else if (jump && canjump)
+            {
+                m_rigidbody2D.velocity  = Vector2.zero;
+                SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
+                m_rigidbody2D.AddForce(Vector2.up * jumpPower);
+                canjump = false;
+            }
+
     }
 
     void FixedUpdate()
